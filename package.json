@@ -1,0 +1,25 @@
+{
+  "name": "h5-action",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/h5-action.js",
+  "scripts": {
+    "test": "xxx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minoru-gondo/h5-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minoru-gondo/h5-action/issues"
+  },
+  "homepage": "https://github.com/minoru-gondo/h5-action",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "galenframework-cli": "^1.6.4"
+  }
+}
