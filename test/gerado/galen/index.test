@@ -10,5 +10,5 @@
 @@ parameterized using browsers
 Action sem validação (${browserName})
     selenium grid ${gridUrl} --page ${website} ${gridArgs}
-        check teste_sem_validacao.spec
+        check teste_inicial.spec
         

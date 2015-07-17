@@ -1,8 +1,8 @@
 ===========================================
-btn_salvar   css  button[label="salvar"]
-body         id   app
+btn_salvar   css  button[label="Salvar"]
+body         id     app
 ===========================================
 
-body:
-  contains: btn_salvar
-  
+btn_salvar
+  inside: body
+  text is: Salvar

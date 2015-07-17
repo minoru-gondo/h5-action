@@ -1,6 +1,6 @@
 import FluxEasy from 'flux-easy';
 import React from 'react';
-import H from '../crud/libs/h5mobile/h5frontend.js';
+import H from '../../libs/h5mobile/h5frontend.js';
 
 window.hsession = {
     language: 'pt_br'
@@ -26,25 +26,11 @@ var mock_store = {
     getState() {
         //var value_save = this.mock_save
         return {
-            value_save: mock_save,
-            editing: mock_editing,
-            editing_errors: mock_editing_errors
+            value_save: this.mock_save,
+            editing: this.mock_editing,
+            editing_errors: this.mock_editing_errors
         }
     }
-}
-
-var mock_store = {
-    getState() {
-            return {
-                editing: mock_editing,
-                editing_errors: mock_editing_errors
-            }
-        },
-        setState(value) {
-            mock_editing.setState({
-                name: value
-            })
-        }
 }
 
 
@@ -60,11 +46,12 @@ var AppAction = React.createClass({
 
 salvar: function () {
         this.save('teste');
-        alert(mock_store.getState());
+        alert(mock_store.mock_save);
 },
 
 save: function(valor){
-    mock_store.setState(valor)
+    var new_valor  = valor + ' ok';
+    mock_store.setState(new_valor)
 }
 
 });
