@@ -13,11 +13,11 @@ Cenário: Renderização do componente
  
  Exemplos:
    estado                                   |    spec
-   {labelText:'salvar'}                     |    button[labelText = 'salvar']
-#   {labelText:'salvar', kind: 'normal'}    |    button[kind = 'normal']
-#   {labelText:'salvar', kind: 'primary'}   |    button[kind = 'primary']
-#   {labelText:'salvar', kind: 'secondary'} |    button[kind = 'secondary']
-#   {labelText:'salvar', kind: 'tertiary'}  |    button[kind = 'tertiary']
+   {labelText:'salvar'}                     |    button[label = 'Salvar']
+   {labelText:'salvar', kind: 'normal'}     |    button[kind = 'normal']
+   {labelText:'salvar', kind: 'primary'}    |    button[kind = 'primary']
+   {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
+   {labelText:'salvar', kind: 'tertiary'}   |    button[kind = 'tertiary']
     
 #Cenário: Execução com mouse
 #    Dado que eu tenho um action

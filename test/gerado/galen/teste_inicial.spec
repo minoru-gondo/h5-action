@@ -1,5 +1,5 @@
 ===========================================
-btn_salvar   css  button[label="Salvar"]
+btn_salvar   css  button[label='Salvar']
 body         id     app
 ===========================================
 
