@@ -45,6 +45,13 @@ Cenário: Renderização do componente
 #    Então a ação daquele action será executada 
 #
 
-
+#       {salvar: {
+#            labelText:'', 
+#            mode: visible ou invisible ou mensagem de erro(desabilitado),
+#            kind: primary, secondary, tertiary, normal
+#            run: função,
+#            hintText: i18n,
+#            shortcut: key
+#        }}
 
 
