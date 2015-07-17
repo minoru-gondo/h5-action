@@ -19,6 +19,7 @@ Cenário: Renderização do componente
    {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
    {labelText:'salvar', kind: 'tertiary'}   |    button[kind = 'tertiary']
     
+#Cenário: Execução com tap - mobile 
 #Cenário: Execução com mouse
 #    Dado que eu tenho um action
 #    Quando eu clicar com o mouse nele

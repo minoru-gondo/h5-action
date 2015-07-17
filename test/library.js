@@ -11,7 +11,7 @@
     }
 });
 .when('eu renderizar o action', function () {
-    var view = 'react.create ';
+    var view = 'react.create';
     filewrite('gerado/app/action.view.js', view);
 
     <h5.action store = {mock}/>
