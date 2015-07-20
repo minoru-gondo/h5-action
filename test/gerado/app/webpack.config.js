@@ -14,12 +14,7 @@ module.exports = {
             },
             {
                 test: /\.jsx?$/,
-                loaders: ['babel', 'flux-easy'], // 'jsx?harmony&stripTypes', 'flowcheck'],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.html$/,
-                loaders: ['babel', 'flux-easy'], // 'jsx?harmony&stripTypes', 'flowcheck'],
+                loaders: ['jsx?harmony&stripTypes', 'flowcheck'],
                 exclude: /node_modules/
             },
             {

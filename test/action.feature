@@ -14,10 +14,10 @@ Cenário: Renderização do componente
  Exemplos:
    estado                                   |    spec
    {labelText:'salvar'}                     |    button[label = 'Salvar']
-   {labelText:'salvar', kind: 'normal'}     |    button[kind = 'normal']
-   {labelText:'salvar', kind: 'primary'}    |    button[kind = 'primary']
-   {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
-   {labelText:'salvar', kind: 'tertiary'}   |    button[kind = 'tertiary']
+#  {labelText:'salvar', kind: 'normal'}     |    button[kind = 'normal']
+#   {labelText:'salvar', kind: 'primary'}    |    button[kind = 'primary']
+#   {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
+#   {labelText:'salvar', kind: 'tertiary'}   |    button[kind = 'tertiary']
     
 #Cenário: Execução com tap - mobile 
 #Cenário: Execução com mouse
@@ -54,5 +54,6 @@ Cenário: Renderização do componente
 #            hintText: i18n,
 #            shortcut: key
 #        }}
-
+# cenario: styles props.style = this.props.style ? this.props.style : {};
+# cenario: quando clica, verificar se colocou a classe click por 300ms
 
