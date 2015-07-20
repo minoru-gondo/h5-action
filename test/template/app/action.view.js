@@ -7,12 +7,7 @@ window.hsession = {
     language: 'pt_br'
 };
 
-var mock_store = {
-    salvar: {
-       {{=estado}}
-    }
-}
-
+var mock_store = $$mock$$;
 
 var AppAction = React.createClass({
     render: function () {

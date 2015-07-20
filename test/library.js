@@ -94,13 +94,16 @@ module.exports = (function () {
             //            filewrite('gerado/app/webpack.config.js', webpack);
             //
             //            run('webpack-dev-server');
-            gera.gera_arquivo('app/action.view.js', mock_store)
+            debugger;
+            gera.gera_arquivo('app/action.view.js', {
+                mock: mock_store
+            });
             next();
         })
         .then('validar o css [spec]', function (spec) {
             filewrite('gerado/galen/teste_inicial.spec', spec)
             run(galen);
         });
-
-});
+    return library;
+}());
 //---------------------------------------------------------------------------

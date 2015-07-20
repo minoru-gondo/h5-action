@@ -1,13 +1,16 @@
-var dot = require('dot'),
-    fs = require('fs');
+var fs = require('fs'),
+    path = require('path');
 
 function gera_arquivo(arq, dados) {
-    var conteudo = fs.readFileSync('template/' + arq + '.tpl', {
+    var conteudo = fs.readFileSync(__dirname + '/template/' + arq, {
         encoding: 'utf8'
     });
-    var fn = dot.template(conteudo);
-    var conteudo_gerado = fn(dados);
-    fs.writeFileSync('gerado/' + arq, {
+    var conteudo_gerado = conteudo.replace('$$mock$$', JSON.stringify(dados.mock, null, 2));
+    fs.writeFileSync(path.resolve(__dirname + '/../temp/' + arq), conteudo_gerado, {
         encoding: 'utf8'
     });
 }
+
+module.exports = {
+    gera_arquivo: gera_arquivo
+};
