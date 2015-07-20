@@ -2,6 +2,8 @@
 //- automaticamente iniciar o webpack
 //- automaticamente vai executar o galen e report erro se houver
 
+debugger;
+
 var Yadda = require('yadda');
 var Portuguese = Yadda.localisation.Portuguese;
 var assert = require('assert');
@@ -14,6 +16,7 @@ module.exports = (function () {
     var library = Portuguese.library()
         .define('ESTADO', /[^\u0000]*/)
         .given('que eu tenho uma ação com o $ESTADO', function (estado, next) {
+            debugger;
             mock_store = {
                 salvar: estado
             }

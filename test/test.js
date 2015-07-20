@@ -11,6 +11,7 @@ Yadda.plugins.mocha.ScenarioLevelPlugin.init();
 new Yadda.FeatureFileSearch(__dirname + '/features').each(function (file) {
     featureFile(file, function (feature) {
 
+        debugger;
         var library = require('./library');
         var yadda = Yadda.createInstance(library);
 
