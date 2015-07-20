@@ -1,4 +1,5 @@
 require('./action.less');
+require('./style.less');
 
 var React = require('react');
 
@@ -19,7 +20,7 @@ var HAction = React.createClass({
         var props = {};
         props.label = action.labelText;
         props.onTouchTap = this._click;
-        props.className = 'h_action ' + (this.state.clickedButton == this ? '_clicked' : '');
+        props.className = 'h_action ' + (this.state.clickedButton == this ? 'h_action_clicked' : '');
         return (React.createElement("button", props, [action.labelText]));
     },
     _click: function (e) {

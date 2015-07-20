@@ -1,5 +1,3 @@
-Action: 
-
 Funcionalidade: Componente para executar ações
     Para permitir ao usuário escolher uma ação a ser executada
     Eu, como programador 
@@ -7,10 +5,10 @@ Funcionalidade: Componente para executar ações
     
 
 Cenário: Renderização do componente
-    Dado que eu tenho o [estado] da ação
+    Dado que eu tenho uma ação com o [estado]
     Quando eu renderizar o action
     Então validar o css [spec]
- 
+    
  Exemplos:
    estado                                   |    spec
    {labelText:'salvar'}                     |    button[label = 'Salvar']
