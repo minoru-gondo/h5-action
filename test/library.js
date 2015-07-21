@@ -12,7 +12,8 @@ var gera = require('./gera');
 
 module.exports = (function () {
     var mock_store;
-
+    var galen = "galen check ";
+    var webpack = "webpack-dev-server";
     var library = Portuguese.library()
         .define('ESTADO', /[^\u0000]*/)
         .given('que eu tenho uma ação com o $ESTADO', function (estado, next) {
@@ -28,11 +29,11 @@ module.exports = (function () {
             next();
         })
         .define('SPEC', /[^\u0000]*/)
-        .then('validar o css $SPEC', function (spec) {
+        .then('validar o css $SPEC', function (spec, done) {
             gera.gera_arquivo('galen/teste_inicial.spec', {
                 btn_salvar: spec
             });
-            run(galen);
+            done();
         });
     return library;
 }());

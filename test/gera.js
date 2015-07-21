@@ -9,7 +9,7 @@ function gera_arquivo(arq, dados) {
     fs.writeFileSync(path.resolve(__dirname + '/../temp/' + arq), conteudo_gerado_view, {
         encoding: 'utf8'
     });
-
+    debugger;
     var conteudo_gerado_spec = conteudo.replace('$$btn_salvar$$', JSON.stringify(dados.mock, null, 2));
     fs.writeFileSync(path.resolve(__dirname + '/../temp/' + arq), conteudo_gerado_spec, {
         encoding: 'utf8'
