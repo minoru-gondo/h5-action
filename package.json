@@ -4,9 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "node node_modules/mocha/bin/_mocha --reporter dot",
-        "istanbul": "NODE_ENV=test istanbul cover _mocha -- -u exports --reporter spec",
-        "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+        "test": "node node_modules/h5-test/bin/run"
     },
     "author": "",
     "license": "ISC",
@@ -22,7 +20,7 @@
         "jsx-loader": "^0.13.2",
         "less-loader": "^2.2.0",
         "mocha": "^2.2.5",
-        "h5-test": "lastest",
+        "h5-test": "latest",
         "node-libs-browser": "^0.5.2",
         "react-tap-event-plugin": "^0.1.7",
         "style-loader": "^0.12.3",
