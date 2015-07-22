@@ -22,6 +22,7 @@
         "jsx-loader": "^0.13.2",
         "less-loader": "^2.2.0",
         "mocha": "^2.2.5",
+        "h5-test": "lastest",
         "node-libs-browser": "^0.5.2",
         "react-tap-event-plugin": "^0.1.7",
         "style-loader": "^0.12.3",
