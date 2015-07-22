@@ -1,17 +1,17 @@
 Funcionalidade: Componente para executar ações
-    Para permitir ao usuário escolher uma ação a ser executada
-    Eu, como programador 
-    Desejo utilizar o componente h5-action
+  Para permitir ao usuário escolher uma ação a ser executada
+  Eu, como programador
+  Desejo utilizar o componente h5-action
     
 
 Cenário: Renderização do componente
-    Dado que eu tenho uma ação com o [estado]
-    Quando eu renderizar o action
-    Então validar o css [spec]
+  Dado que eu tenho uma ação com o [estado]
+  Quando eu renderizar o action
+  Então validar o css [spec]
     
- Exemplos:
-   estado                                   |    spec
-   {labelText:'salvar'}                     |    button[label = 'Salvar']
+  Exemplos:
+    estado             | spec
+    labelText:'salvar' | button[label = 'Salvar']
 #   {labelText:'salvar', kind: 'normal'}     |    button[kind = 'normal']
 #   {labelText:'salvar', kind: 'primary'}    |    button[kind = 'primary']
 #   {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
