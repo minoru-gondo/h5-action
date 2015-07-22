@@ -11,8 +11,13 @@ Cenário: Renderização do componente
     
   Exemplos:
     estado             | spec
-    labelText:'salvar' | button[label = 'Salvar']
-#   {labelText:'salvar', kind: 'normal'}     |    button[kind = 'normal']
+    --------------------------------------
+    labelText:'Salvar' | btn_salvar
+                       |   inside: body
+                       |   text is: Salvar
+    --------------------------------------
+#    labelText:'salvar', kind: 'normal' |
+#                                       |
 #   {labelText:'salvar', kind: 'primary'}    |    button[kind = 'primary']
 #   {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
 #   {labelText:'salvar', kind: 'tertiary'}   |    button[kind = 'tertiary']
