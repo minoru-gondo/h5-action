@@ -1,5 +1,4 @@
 require('./action.less');
-require('./style.less');
 
 var React = require('react');
 
@@ -7,7 +6,8 @@ var HAction = React.createClass({
     propTypes: {
         store: React.PropTypes.object.isRequired,
         action: React.PropTypes.string.isRequired,
-        kind: React.PropTypes.string.isRequired
+        kind: React.PropTypes.string.isRequired,
+        mode: React.PropTypes.string.isRequired
     },
     getInitialState: function () {
         return {
@@ -19,6 +19,7 @@ var HAction = React.createClass({
         var store = this.props.store;
         var action = store[this.props.action];
         var kind = action.kind;
+        var mode = action.mode;
         var props = {};
 
         props.onTouchTap = this._click;
@@ -34,7 +35,13 @@ var HAction = React.createClass({
         if (this.state.clickedButton)
             props.className.push('h_action_clicked');
 
+        if (mode == 'visible')
+            props.className.push('h_action_mode_visible');
+
         props.className = props.className.join(' ');
+
+        if (mode == 'invisible')
+            props.className = 'h_action_mode_invisible'
         return (React.createElement("button", props, [action.labelText]));
     },
     _click: function (e) {

@@ -10,22 +10,32 @@ Cenário: Renderização do componente
   Então validar o css [spec]
     
   Exemplos:
-    estado                              | spec
-    ---------------------------------------------------------------------------------------
-    labelText:'Salvar'                  | btn_salvar
-                                        |   inside: body
-                                        |   text is: Salvar
-                                        |   css background-color is: rgba(255, 255, 255, 1)
-    ---------------------------------------------------------------------------------------
-    labelText:'salvar', kind: 'normal'  | btn_salvar
-                                        |   css background-color is: rgba(255, 255, 255, 1)
-    ---------------------------------------------------------------------------------------
-    labelText:'salvar', kind: 'primary' | btn_salvar
-                                        |   css background-color is: rgba(100, 149, 237, 1)
-
-#   {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
-#   {labelText:'salvar', kind: 'tertiary'}   |    button[kind = 'tertiary']
-    
+    estado                                                   | spec
+    ----------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar'                                       | btn_salvar
+                                                             |   inside: body
+                                                             |   text is: Salvar
+                                                             |   css background-color is: rgba(255, 255, 255, 1)
+    ----------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'normal'                       | btn_salvar
+                                                             |   css background-color is: rgba(255, 255, 255, 1)
+    ----------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'primary'                      | btn_salvar
+                                                             |   css background-color is: rgba(100, 149, 237, 1)
+    ----------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'secondary'                    | btn_salvar
+                                                             |   css background-color is: rgba(255, 192, 203, 1)
+    ----------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'tertiary'                     | btn_salvar
+                                                             |   css background-color is: rgba(50, 205, 50, 1)
+    ----------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'secondary', mode: 'visible'   | btn_salvar
+                                                             |   inside: body
+                                                             |   text is: Salvar
+                                                             |   css background-color is: rgba(255, 192, 203, 1)
+    ----------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'secondary', mode: 'invisible' | btn_salvar
+                                                             |   absent
 #Cenário: Execução com tap - mobile 
 #Cenário: Execução com mouse
 #    Dado que eu tenho um action
