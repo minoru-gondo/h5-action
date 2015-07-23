@@ -20,17 +20,21 @@ var HAction = React.createClass({
         var action = store[this.props.action];
         var kind = action.kind;
         var props = {};
-        props.label = action.labelText;
+
         props.onTouchTap = this._click;
-        props.className = 'h_action ' + (this.state.clickedButton == this ? 'h_action_clicked' : '');
-        if (kind == 'normal')
-            props.className = 'h_action_kind_normal';
-        else if (kind == 'primary')
-            props.className = 'h_action_kind_primary';
+        props.className = ['h_action', this.props.action];
+
+        if (kind == 'primary')
+            props.className.push('h_action_kind_primary');
         else if (kind == 'secondary')
-            props.className = 'h_action_kind_secondary';
+            props.className.push('h_action_kind_secondary');
         else if (kind == 'tertiary')
-            props.className = 'h_action_kind_tertiary';
+            props.className.push('h_action_kind_tertiary');
+
+        if (this.state.clickedButton)
+            props.className.push('h_action_clicked');
+
+        props.className = props.className.join(' ');
         return (React.createElement("button", props, [action.labelText]));
     },
     _click: function (e) {

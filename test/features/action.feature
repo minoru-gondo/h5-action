@@ -10,17 +10,18 @@ Cenário: Renderização do componente
   Então validar o css [spec]
     
   Exemplos:
-    estado                             | spec
+    estado                              | spec
     ---------------------------------------------------------------------------------------
-    labelText:'salvar', kind: 'normal' | btn_salvar
-                                       |   css background-color is: rgba(205, 197, 191, 1)
+    labelText:'Salvar'                  | btn_salvar
+                                        |   inside: body
+                                        |   text is: Salvar
+                                        |   css background-color is: rgba(255, 255, 255, 1)
     ---------------------------------------------------------------------------------------
-    labelText:'Salvar'                 | btn_salvar
-                                       |   inside: body
-                                       |   text is: Salvar
+    labelText:'salvar', kind: 'normal'  | btn_salvar
+                                        |   css background-color is: rgba(255, 255, 255, 1)
     ---------------------------------------------------------------------------------------
-    labelText:'salvar', kind: 'primary'| btn_salvar
-                                       |   css background-color is: rgba(100,149,237, 1)
+    labelText:'salvar', kind: 'primary' | btn_salvar
+                                        |   css background-color is: rgba(100, 149, 237, 1)
 
 #   {labelText:'salvar', kind: 'secondary'}  |    button[kind = 'secondary']
 #   {labelText:'salvar', kind: 'tertiary'}   |    button[kind = 'tertiary']
