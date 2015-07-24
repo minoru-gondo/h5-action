@@ -40,9 +40,11 @@ var HAction = React.createClass({
 
         props.className = props.className.join(' ');
 
-        if (mode == 'invisible')
-            props.className = 'h_action_mode_invisible'
-        return (React.createElement("button", props, [action.labelText]));
+        if (mode == 'invisible') {
+            return null;
+        }
+        else
+            return (React.createElement("button", props, [action.labelText]));
     },
     _click: function (e) {
         var store = this.props.store;
