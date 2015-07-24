@@ -12,36 +12,17 @@ module.exports = function (library, expect, h5_test) {
             h5_test.pack('app', next);
         })
 
-    .then('validar o css ([^\u0000]*)', function (spec, next) {
-        expect(spec).to.be.an('string');
-        h5_test.replace('___specSalvar___', spec);
-        h5_test.check('test/teste_inicial.spec');
-        next();
-    });
+    .then('deverá ser exibido ([^\u0000]*)', function (spec, next) {
+            expect(spec).to.be.an('string');
+            h5_test.replace('___specSalvar___', spec);
+            h5_test.check('test/teste_inicial.spec');
+            next();
+        })
+        .then('o titulo será ([^\u0000]*)', function (titulo, next) {
+            if (titulo) {
+                h5_test.replace('___titulo___', titulo);
+                h5_test.run('test/check_titulo.js');
+            }
+            next();
+        });
 };
-
-
-//
-//module.exports = function (library, expect, h5_test) {
-//    library
-//       .define('ESTADO', /[^\u0000]*/)
-//        .given('que eu tenho uma ação com o $ESTADO', function (estado, next) {
-//            mock_store = {
-//                salvar: estado
-//            }
-//            next();
-//        })
-//        .when('eu renderizar o action', function (next) {
-//            gera.gera_arquivo('app/action.view.js', {
-//                mock: mock_store
-//            });
-//            next();
-//        })
-//        .define('SPEC', /[^\u0000]*/)
-//        .then('validar o css $SPEC', function (spec, done) {
-//            gera.gera_arquivo('galen/teste_inicial.spec', {
-//                btn_salvar: spec
-//            });
-//            done();
-//        });
-//};

@@ -7,7 +7,8 @@ var HAction = React.createClass({
         store: React.PropTypes.object.isRequired,
         action: React.PropTypes.string.isRequired,
         kind: React.PropTypes.string.isRequired,
-        mode: React.PropTypes.string.isRequired
+        mode: React.PropTypes.string.isRequired,
+        hintText:React.PropTypes.string.isRequired
     },
     getInitialState: function () {
         return {
@@ -20,8 +21,10 @@ var HAction = React.createClass({
         var action = store[this.props.action];
         var kind = action.kind;
         var mode = action.mode;
+        var hintText = action.hintText;
         var props = {};
 
+        props.title = hintText;
         props.onTouchTap = this._click;
         props.className = ['h_action', this.props.action];
 
@@ -41,7 +44,7 @@ var HAction = React.createClass({
         props.className = props.className.join(' ');
 
         if (mode == 'invisible') {
-            return null;
+            return React.createElement("span");
         }
         else
             return (React.createElement("button", props, [action.labelText]));

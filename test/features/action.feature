@@ -1,41 +1,54 @@
-Funcionalidade: Componente para executar ações
+  Funcionalidade: Componente para executar ações
   Para permitir ao usuário escolher uma ação a ser executada
   Eu, como programador
   Desejo utilizar o componente h5-action
     
 
-Cenário: Renderização do componente
+  Cenário: Renderização do componente
   Dado que eu tenho uma ação com o [estado]
   Quando eu renderizar o action
-  Então validar o css [spec]
-    
+  Então deverá ser exibido [spec]
+  E o titulo será [titulo]
+
   Exemplos:
-    estado                                                   | spec
-    ----------------------------------------------------------------------------------------------------------------------
-    labelText:'Salvar'                                       | btn_salvar
-                                                             |   inside: body
-                                                             |   text is: Salvar
-                                                             |   css background-color is: rgba(255, 255, 255, 1)
-    ----------------------------------------------------------------------------------------------------------------------
-    labelText:'Salvar', kind: 'normal'                       | btn_salvar
-                                                             |   css background-color is: rgba(255, 255, 255, 1)
-    ----------------------------------------------------------------------------------------------------------------------
-    labelText:'Salvar', kind: 'primary'                      | btn_salvar
-                                                             |   css background-color is: rgba(100, 149, 237, 1)
-    ----------------------------------------------------------------------------------------------------------------------
-    labelText:'Salvar', kind: 'secondary'                    | btn_salvar
-                                                             |   css background-color is: rgba(255, 192, 203, 1)
-    ----------------------------------------------------------------------------------------------------------------------
-    labelText:'Salvar', kind: 'tertiary'                     | btn_salvar
-                                                             |   css background-color is: rgba(50, 205, 50, 1)
-    ----------------------------------------------------------------------------------------------------------------------
-    labelText:'Salvar', kind: 'secondary', mode: 'visible'   | btn_salvar
-                                                             |   inside: body
-                                                             |   text is: Salvar
-                                                             |   css background-color is: rgba(255, 192, 203, 1)
-    ----------------------------------------------------------------------------------------------------------------------
-    labelText:'Salvar', kind: 'secondary', mode: 'invisible' | btn_salvar
-                                                             |   absent
+    estado                                                            | spec                                              | titulo
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar'                                                | btn_salvar                                        |
+                                                                      |   inside: body                                    |
+                                                                      |   text is: Salvar                                 |
+                                                                      |   css background-color is: rgba(255, 255, 255, 1) |
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'normal'                                | btn_salvar                                        |
+                                                                      |   inside: body                                    |
+                                                                      |   text is: Salvar                                 |
+                                                                      |   css background-color is: rgba(255, 255, 255, 1) |
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', mode: 'visible'                               | btn_salvar                                        |
+                                                                      |   inside: body                                    |
+                                                                      |   text is: Salvar                                 |
+                                                                      |   css background-color is: rgba(255, 255, 255, 1) |
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'primary'                               | btn_salvar                                        |
+                                                                      |   css background-color is: rgba(100, 149, 237, 1) |
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'secondary'                             | btn_salvar                                        |
+                                                                      |   css background-color is: rgba(255, 192, 203, 1) |
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'tertiary'                              | btn_salvar                                        |
+                                                                      |   css background-color is: rgba(50, 205, 50, 1)   |
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', kind: 'secondary', mode: 'invisible'          | btn_salvar                                        |
+                                                                      |   absent                                          |
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    labelText:'Salvar', hintText: 'Salvar as informações do paciente' | btn_salvar                                        | Salvar as informações do paciente
+                                                                      |   inside: body                                    |
+                                                                      |   css background-color is: rgba(255, 255, 255, 1) |
+#labelText:'Salvar', kind: 'secondary', mode: 'Erro ao Salvar'
+#
+#labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', shortcut: key
+#labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', shortcut: key, run: salva_info();
+
+
 #Cenário: Execução com tap - mobile 
 #Cenário: Execução com mouse
 #    Dado que eu tenho um action
