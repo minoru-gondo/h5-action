@@ -41,10 +41,14 @@ var HAction = React.createClass({
         if (mode == 'visible')
             props.className.push('h_action_mode_visible');
 
+        if(!mode) {
+            props.className.push('h_action_mode_visible');
+            mode = 'visible';
+        }
         if(mode != 'visible' && mode != 'invisible'){
-         props.disabled = true;
-         var span =  React.createElement("span", mode, {} );
-         return (React.createElement("button", props, span));
+         props.title = mode;
+         props.disabled = 'true';
+         props.className.push('h_action_mode_error');
         }
 
         props.className = props.className.join(' ');

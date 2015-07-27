@@ -18,7 +18,7 @@
                                                             |                                                                                              |   text is: Salvar                                 |
                                                             |                                                                                              |   css background-color is: rgba(255, 255, 255, 1) |
     ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar sem kind normal                                  |    labelText:'Salvar', kind: 'normal'                                                        | btn_salvar                                        |
+    Salvar com kind normal                                  |    labelText:'Salvar', kind: 'normal'                                                        | btn_salvar                                        |
                                                             |                                                                                              |   inside: body                                    |
                                                             |                                                                                              |   text is: Salvar                                 |
                                                             |                                                                                              |   css background-color is: rgba(255, 255, 255, 1) |
