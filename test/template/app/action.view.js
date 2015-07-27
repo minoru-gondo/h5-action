@@ -13,6 +13,12 @@ var mock_store = {
     }
 };
 
+function salva_info(){
+
+ mock_store.salvar.labelText = 'Salvo'
+
+};
+
 var AppAction = React.createClass({
     render: function () {
         return React.createElement(H5Action, {

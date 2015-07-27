@@ -11,44 +11,47 @@
   E o titulo será [titulo]
 
   Exemplos:
-    situacao                                                | estado                                                                                       | spec                                              | titulo
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar sem kind, então kind é normal                    |  labelText:'Salvar'                                                                          | btn_salvar                                        |
-                                                            |                                                                                              |   inside: body                                    |
-                                                            |                                                                                              |   text is: Salvar                                 |
-                                                            |                                                                                              |   css background-color is: rgba(255, 255, 255, 1) |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com kind normal                                  |    labelText:'Salvar', kind: 'normal'                                                        | btn_salvar                                        |
-                                                            |                                                                                              |   inside: body                                    |
-                                                            |                                                                                              |   text is: Salvar                                 |
-                                                            |                                                                                              |   css background-color is: rgba(255, 255, 255, 1) |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com mode visible e sem kind, então kind é normal |    labelText:'Salvar', mode: 'visible'                                                       | btn_salvar                                        |
-                                                            |                                                                                              |   inside: body                                    |
-                                                            |                                                                                              |   text is: Salvar                                 |
-                                                            |                                                                                              |   css background-color is: rgba(255, 255, 255, 1) |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com kind primary                                 |    labelText:'Salvar', kind: 'primary'                                                       | btn_salvar                                        |
-                                                            |                                                                                              |   css background-color is: rgba(100, 149, 237, 1) |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com kind secondary                               |  labelText:'Salvar', kind: 'secondary'                                                       | btn_salvar                                        |
-                                                            |                                                                                              |   css background-color is: rgba(255, 192, 203, 1) |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com kind tertiary                                |    labelText:'Salvar', kind: 'tertiary'                                                      | btn_salvar                                        |
-                                                            |                                                                                              |   css background-color is: rgba(50, 205, 50, 1)   |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com mode invisible, então só renderiza um span   |  labelText:'Salvar', kind: 'secondary', mode: 'invisible'                                    | btn_salvar                                        |
-                                                            |                                                                                              |   absent                                          |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com mode de mensagem de erro                     |  labelText:'Tirar Foto', kind: 'secondary', mode: 'Nenhum dispositivo fotográfico detectado' | btn_salvar                                        |
-                                                            |                                                                                              |   css background-color is: rgba(255, 192, 203, 1) |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com hintText                                     | labelText:'Salvar', hintText: 'Salvar as informações do paciente'                            | btn_salvar                                        | Salvar as informações do paciente
-                                                            |                                                                                              |   inside: body                                    |
-                                                            |                                                                                              |   css background-color is: rgba(255, 255, 255, 1) |
+    situacao                                                | estado                                                                             | spec                                              | titulo
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar sem kind, então kind é normal                    |  labelText:'Salvar'                                                                | btn_salvar                                        |
+                                                            |                                                                                    |   inside: body                                    |
+                                                            |                                                                                    |   text is: Salvar                                 |
+                                                            |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com kind normal                                  |    labelText:'Salvar', kind: 'normal'                                              | btn_salvar                                        |
+                                                            |                                                                                    |   inside: body                                    |
+                                                            |                                                                                    |   text is: Salvar                                 |
+                                                            |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com mode visible e sem kind, então kind é normal |    labelText:'Salvar', mode: 'visible'                                             | btn_salvar                                        |
+                                                            |                                                                                    |   inside: body                                    |
+                                                            |                                                                                    |   text is: Salvar                                 |
+                                                            |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com kind primary                                 |    labelText:'Salvar', kind: 'primary'                                             | btn_salvar                                        |
+                                                            |                                                                                    |   css background-color is: rgba(100, 149, 237, 1) |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com kind secondary                               |  labelText:'Salvar', kind: 'secondary'                                             | btn_salvar                                        |
+                                                            |                                                                                    |   css background-color is: rgba(255, 192, 203, 1) |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com kind tertiary                                |    labelText:'Salvar', kind: 'tertiary'                                            | btn_salvar                                        |
+                                                            |                                                                                    |   css background-color is: rgba(50, 205, 50, 1)   |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com mode invisible, então só renderiza um span   |  labelText:'Salvar', kind: 'secondary', mode: 'invisible'                          | btn_salvar                                        |
+                                                            |                                                                                    |   absent                                          |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com mode de mensagem de erro                     |  labelText:'Salvar', kind: 'secondary', mode: 'Existem campos obrigatórios vazios' | btn_salvar                                        | Existem campos obrigatórios vazios
+                                                            |                                                                                    |   css background-color is: rgba(204, 204, 204, 1) |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com hintText                                     | labelText:'Salvar', hintText: 'Salvar as informações do paciente'                  | btn_salvar                                        | Salvar as informações do paciente
+                                                            |                                                                                    |   inside: body                                    |
+                                                            |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com clique que muda texto do botão               | labelText:'Salvar', kind: 'tertiary', run: salva_info()                            | btn_salvar                                        |
+                                                            |                                                                                    |   css background-color is: rgba(50, 205, 50, 1)   |
+                                                            |                                                                                    |   text is: Salvo                                  |
 
-#labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', shortcut: key
-#labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', shortcut: key, run: salva_info();
+#labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', run: salva_info()
 
 
 #Cenário: Execução com tap - mobile 
@@ -77,7 +80,7 @@
 #    Quando eu falar o nome do action próximo do microfone do equipamento que estiver rodando o programa
 #    Então a ação daquele action será executada 
 #
-
+#
 #       {salvar: {
 #            labelText:'', 
 #            mode: visible ou invisible ou mensagem de erro(desabilitado),
@@ -86,6 +89,10 @@
 #            hintText: i18n,
 #            shortcut: key
 #        }}
+#
+#Cenário: Renderizar botão com propriedade shortcut: key
+# Exemplo: labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', shortcut: key
+#
 # cenario: styles props.style = this.props.style ? this.props.style : {};
 # cenario: quando clica, verificar se colocou a classe click por 300ms
 
