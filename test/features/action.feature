@@ -29,13 +29,13 @@
                                                             |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Salvar com kind primary                                 |    labelText:'Salvar', kind: 'primary'                                             | btn_salvar                                        |
-                                                            |                                                                                    |   css background-color is: rgba(100, 149, 237, 1) |
+                                                            |                                                                                    |   css background-color is: rgba(0, 188, 212, 1)   |
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Salvar com kind secondary                               |  labelText:'Salvar', kind: 'secondary'                                             | btn_salvar                                        |
-                                                            |                                                                                    |   css background-color is: rgba(255, 192, 203, 1) |
+                                                            |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Salvar com kind tertiary                                |    labelText:'Salvar', kind: 'tertiary'                                            | btn_salvar                                        |
-                                                            |                                                                                    |   css background-color is: rgba(50, 205, 50, 1)   |
+                                                            |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Salvar com mode invisible, então só renderiza um span   |  labelText:'Salvar', kind: 'secondary', mode: 'invisible'                          | btn_salvar                                        |
                                                             |                                                                                    |   absent                                          |
@@ -46,10 +46,19 @@
     Salvar com hintText                                     | labelText:'Salvar', hintText: 'Salvar as informações do paciente'                  | btn_salvar                                        | Salvar as informações do paciente
                                                             |                                                                                    |   inside: body                                    |
                                                             |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
-    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com clique que muda texto do botão               | labelText:'Salvar', kind: 'tertiary', run: salva_info()                            | btn_salvar                                        |
-                                                            |                                                                                    |   css background-color is: rgba(50, 205, 50, 1)   |
-                                                            |                                                                                    |   text is: Salvo                                  |
+
+  Cenário: Renderização do componente [situacao]
+  Dado que eu tenho uma ação com o [estado]
+  Quando eu renderizar o action
+  E clicar no botão
+  Então deverá ser exibido [spec]
+
+  Exemplos:
+    situacao                                  | estado                                                | spec
+    -----------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com clique que muda texto do botão | labelText:'Salvar', kind: 'tertiary', run: salva_info | btn_salvar
+                                              |                                                       |   css background-color is: rgba(255, 255, 255, 1)
+                                              |                                                       |   text is: Salvo
 
 #labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', run: salva_info()
 

@@ -11,8 +11,11 @@ module.exports = function (library, expect, h5_test) {
             h5_test.serve('app/index.html');
             h5_test.pack('app', next);
         })
-
-    .then('deverá ser exibido ([^\u0000]*)', function (spec, next) {
+        .when('clicar no botão', function (next) {
+            h5_test.pack('app', next);
+            h5_test.run('test/click.js');
+        })
+        .then('deverá ser exibido ([^\u0000]*)', function (spec, next) {
             expect(spec).to.be.an('string');
             h5_test.replace('___specSalvar___', spec);
             h5_test.check('test/teste_inicial.spec');

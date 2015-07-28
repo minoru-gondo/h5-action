@@ -3,7 +3,6 @@ require('./action.less');
 var React = require('react');
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
-
 var HAction = React.createClass({
     propTypes: {
         store: React.PropTypes.object.isRequired,
@@ -29,7 +28,7 @@ var HAction = React.createClass({
         var props = {};
 
         props.title = hintText;
-        props.onTouchTap = this._click;
+        props.onClick = this._click;
         props.className = ['h_action', this.props.action];
 
         if (kind == 'primary')
@@ -66,8 +65,7 @@ var HAction = React.createClass({
 
     _click: function (e) {
         setTimeout(function () {
-            var run = this.props.store[this.props.action].run;
-            this.props.onTouchTap = run;
+            this.props.store[this.props.action].run();
             this.setState({
 
             });
