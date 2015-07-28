@@ -65,10 +65,15 @@ var HAction = React.createClass({
 
     _click: function (e) {
         setTimeout(function () {
+            if(this.props.mode != 'visible' && this.props.mode != 'invisible' && this.props.mode != undefined){
+                return
+            }
+            else {
             this.props.store[this.props.action].run();
             this.setState({
 
             });
+            }
         }.bind(this), 300)
     }
 });

@@ -47,31 +47,24 @@
                                                             |                                                                                    |   inside: body                                    |
                                                             |                                                                                    |   css background-color is: rgba(255, 255, 255, 1) |
 
-  Cenário: Renderização do componente [situacao]
+  Cenário: Execução com mouse no botão [situacao]
   Dado que eu tenho uma ação com o [estado]
   Quando eu renderizar o action
   E clicar no botão
   Então deverá ser exibido [spec]
 
+
   Exemplos:
-    situacao                                  | estado                                                | spec
-    -----------------------------------------------------------------------------------------------------------------------------------------------------
-    Salvar com clique que muda texto do botão | labelText:'Salvar', kind: 'tertiary', run: salva_info | btn_salvar
-                                              |                                                       |   css background-color is: rgba(255, 255, 255, 1)
-                                              |                                                       |   text is: Salvo
+    situacao                                        | estado                                                                          | spec
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com clique que muda texto do botão       | labelText:'Salvar', kind: 'tertiary', run: salva_info                           | btn_salvar
+                                                    |                                                                                 |   css background-color is: rgba(255, 255, 255, 1)
+                                                    |                                                                                 |   text is: Salvo
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Salvar com clique no botão com mensagem de erro | labelText:'Salvar', mode: 'Existem campos obrigatórios vazios', run: salva_info | btn_salvar
+                                                    |                                                                                 |   css background-color is: rgba(204, 204, 204, 1)
+                                                    |                                                                                 |   text is: Salvar
 
-
-
-
-#Cenário: Execução com mouse
-#    Dado que eu tenho um action
-#    Quando eu clicar com o mouse nele
-#    Então será feito a chamada para executar uma ação
-#    Mas se no lugar desse action estiver mostrando uma mensagem de erro
-#    Então é porque a opção está desabilitada
-#    E se a seta do mouse estiver em cima de uma das opções, será mostrado um hintText
-#
-#
 #Cenário: Execução com tap - mobile
 #Cenário: Execução com teclado
 #    Dado que eu tenho um action
