@@ -60,10 +60,9 @@
                                               |                                                       |   css background-color is: rgba(255, 255, 255, 1)
                                               |                                                       |   text is: Salvo
 
-#labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', run: salva_info()
 
 
-#Cenário: Execução com tap - mobile 
+
 #Cenário: Execução com mouse
 #    Dado que eu tenho um action
 #    Quando eu clicar com o mouse nele
@@ -73,6 +72,7 @@
 #    E se a seta do mouse estiver em cima de uma das opções, será mostrado um hintText
 #
 #
+#Cenário: Execução com tap - mobile
 #Cenário: Execução com teclado
 #    Dado que eu tenho um action
 #    Quando eu o selecionar usando a tecla tab e depois teclar enter
