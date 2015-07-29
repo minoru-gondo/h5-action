@@ -65,7 +65,10 @@
                                                     |                                                                                 |   css background-color is: rgba(204, 204, 204, 1)
                                                     |                                                                                 |   text is: Salvar
 
+
+#@pendente
 #Cenário: Execução com tap - mobile
+#@pendente
 #Cenário: Execução com teclado
 #    Dado que eu tenho um action
 #    Quando eu o selecionar usando a tecla tab e depois teclar enter
@@ -96,5 +99,4 @@
 # Exemplo: labelText:'Salvar', kind: 'primary', mode: 'visible', hintText: 'Salvar as informações do paciente', shortcut: key
 #
 # cenario: styles props.style = this.props.style ? this.props.style : {};
-# cenario: quando clica, verificar se colocou a classe click por 300ms
 
