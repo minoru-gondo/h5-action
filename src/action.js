@@ -53,6 +53,8 @@ var HAction = React.createClass({
          props.disabled = 'true';
          props.className.push('h_action_mode_error');
         }
+        if(this.props.className)
+             props.className.push(this.props.className);
 
         props.className = props.className.join(' ');
 
