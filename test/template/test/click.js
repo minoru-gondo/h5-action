@@ -1,7 +1,7 @@
-this.Page = function (driver) {
-  GalenPages.extendPage(this, driver, {
+this.Page = $page('btn', {
     btn_salvar: "button.salvar"
-  });
-};
-var page = new this.Page(driver);
+
+});
+
+var page = new Page(driver);
 page.btn_salvar.click();

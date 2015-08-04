@@ -17,7 +17,7 @@ module.exports = function (library, expect, h5_test) {
         })
         .then('deverá ser exibido ([^\u0000]*)', function (spec, next) {
             expect(spec).to.be.an('string');
-            h5_test.replace('___specSalvar___', spec);
+            h5_test.replace('___specSalvar___', spec.replace(/\n/g,'\n    '));
             h5_test.check('test/teste_inicial.spec');
             next();
         })

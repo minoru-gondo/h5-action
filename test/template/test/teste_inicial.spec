@@ -1,6 +1,6 @@
-===========================================
-btn_salvar       css    button.salvar
-body             id     app
-===========================================
+@objects
+   btn_salvar       css    button.salvar
+   body             id     app
 
-___specSalvar___
+= btn_salvar section =
+    ___specSalvar___
