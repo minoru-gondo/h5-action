@@ -33,10 +33,9 @@ var HAction = React.createClass({
 
         if (kind == 'primary')
             props.className.push('h_action_kind_primary');
-        else if (kind == 'secondary')
-            props.className.push('h_action_kind_secondary');
-        else if (kind == 'tertiary')
-            props.className.push('h_action_kind_tertiary');
+
+        else if (kind == 'secondary' || kind == 'tertiary')
+            props.className.push('h_action_kind_others');
 
         if (this.state.clickedButton)
             props.className.push('h_action_clicked');
@@ -48,10 +47,16 @@ var HAction = React.createClass({
             props.className.push('h_action_mode_visible');
             mode = 'visible';
         }
-        if(mode != 'visible' && mode != 'invisible'){
+        if(mode != 'visible' && mode != 'invisible' && kind == 'primary'){
          props.title = mode;
          props.disabled = 'true';
-         props.className.push('h_action_mode_error');
+         props.className.push('h_action_mode_error_primary');
+        }
+
+        if(mode != 'visible' && mode != 'invisible' && kind != 'primary'){
+         props.title = mode;
+         props.disabled = 'true';
+         props.className.push('h_action_mode_error_others');
         }
         if(this.props.className)
              props.className.push(this.props.className);
