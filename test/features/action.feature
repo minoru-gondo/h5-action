@@ -41,7 +41,7 @@
                                                             |                                                                                    |   absent                                           |
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Salvar com mode de mensagem de erro                     |  labelText:'Salvar', kind: 'secondary', mode: 'Existem campos obrigatórios vazios' | btn_salvar:                                        | Existem campos obrigatórios vazios
-                                                            |                                                                                    |   css background-color is "rgba(204, 204, 204, 1)" |
+                                                            |                                                                                    |   css background-color is "rgba(255, 255, 255, 1)" |
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Salvar com hintText                                     | labelText:'Salvar', hintText: 'Salvar as informações do paciente'                  | btn_salvar:                                        | Salvar as informações do paciente
                                                             |                                                                                    |   inside body                                      |
@@ -62,7 +62,7 @@
                                                     |                                                                                 |   text is "Salvo"
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     Salvar com clique no botão com mensagem de erro | labelText:'Salvar', mode: 'Existem campos obrigatórios vazios', run: salva_info | btn_salvar:
-                                                    |                                                                                 |   css background-color is "rgba(204, 204, 204, 1)"
+                                                    |                                                                                 |   css background-color is "rgba(255, 255, 255, 1)"
                                                     |                                                                                 |   text is "Salvar"
 
 
