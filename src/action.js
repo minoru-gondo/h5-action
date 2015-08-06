@@ -63,6 +63,10 @@ var HAction = React.createClass({
 
         props.className = props.className.join(' ');
 
+        if (mode == 'invisible' && kind == 'primary') {
+            throw "kind do action primary não pode ficar com mode invisible"
+        }
+
         if (mode == 'invisible') {
             return React.createElement("span");
         }
