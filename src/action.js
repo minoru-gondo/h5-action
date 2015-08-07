@@ -31,7 +31,7 @@ var HAction = React.createClass({
         props.onClick = this._click;
         props.className = ['h_action', this.props.action];
 
-        if(kind != 'primary' && kind != 'secondary' && kind != 'tertiary' && kind != '')
+        if(kind != 'primary' && kind != 'secondary' && kind != 'tertiary' && kind != undefined)
             throw "O kind usado não é valido";
 
         if (kind == 'primary')
