@@ -20,7 +20,7 @@ var HAction = React.createClass({
     mixins: [],
     render: function () {
         var store = this.props.store;
-        var action = store[this.props.action];
+        var action = store.actions[this.props.action];
         var kind = action.kind;
         var mode = action.mode;
         var hintText = action.hintText;
