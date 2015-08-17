@@ -1,15 +1,15 @@
 require('./action.less');
 
 var React = require('react');
-var injectTapEventPlugin = require("react-tap-event-plugin");
-injectTapEventPlugin();
+//var injectTapEventPlugin = require("react-tap-event-plugin");
+//injectTapEventPlugin();
 var HAction = React.createClass({
     propTypes: {
         store: React.PropTypes.object.isRequired,
         action: React.PropTypes.string.isRequired,
-        kind: React.PropTypes.string.isRequired,
-        mode: React.PropTypes.string.isRequired,
-        hintText:React.PropTypes.string.isRequired,
+        kind: React.PropTypes.string,
+        mode: React.PropTypes.string,
+        hintText:React.PropTypes.string,
         run:React.PropTypes.func.isRequired
     },
     getInitialState: function () {
@@ -83,7 +83,7 @@ var HAction = React.createClass({
                 return
             }
             else {
-            this.props.store[this.props.action].run();
+            this.props.store.actions[this.props.action].run();
             this.setState({
 
             });
